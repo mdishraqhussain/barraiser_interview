@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useDispatch, useSelector } from 'react-redux';
+import GridUITable from "./GridUITable";
+
+const sizeOfTable = [10, 10];
+
 
 function App() {
+  // const dispatch = useDispatch();
+  // const {myArr, error} = useSelector((state)=>{
+  //   return state.initialReducer;
+  // })
+  // const handleClick = (e) =>{
+  //   dispatch(myThunkCall("hullbulli"));
+  // }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+   <GridUITable size = {sizeOfTable}/>
+       </>
   );
 }
+
 
 export default App;
